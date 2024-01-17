@@ -5,7 +5,7 @@ import openai
 import webbrowser
 
 
-openai.api_key = "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"
+openai.api_key = "your api_key value"
 r = sr.Recognizer()
 engine = pyttsx3.init()
 def record_audio():
@@ -53,7 +53,7 @@ def transcribe_audio_to_text(file):
 """
 def generate_response(prompt):
     response = openai.Completion.create(
-        engine="gpt-3.5-turbo-instruct",
+        engine="gpt-3.5-turbo-instruct", #most suitable model is "text-davinci-003 but it not available in openai" 
         prompt=prompt,
         max_tokens=150,
         n=1,
